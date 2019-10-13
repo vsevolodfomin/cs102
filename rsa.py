@@ -1,10 +1,10 @@
 import random
+import sys
 
 def is_prime(n):
     for i in range(2,int(n**0.5)+1):
         if n%i==0:
             return False
-
     return True
 
 def gcd(a, b):
@@ -21,9 +21,16 @@ def multiplicative_inverse(e, phi):
     23
     """
     # PUT YOUR CODE HERE
-    pass
-
-
+    div1=float()
+    d = 0 
+    div1=((d*e)-1)/phi
+    for d in range (sys.maxsize) :
+        div1=((d*e)-1)/phi
+        if (div1). is_integer()==True:
+            break
+        else:
+            d+=1
+    return d
 
 def generate_keypair(p, q):
     if not (is_prime(p) and is_prime(q)):
