@@ -1,16 +1,19 @@
 import random
 import sys
 
+
 def is_prime(n):
-    for i in range(2,int(n**0.5)+1):
-        if n%i==0:
+    for i in range(2, int(n  0.5) + 1):
+        if n % i == 0:
             return False
     return True
+
 
 def gcd(a, b):
     while b != 0:
         (a, b) = (b, a % b)
     return a
+
 
 def multiplicative_inverse(e, phi):
     """
@@ -21,16 +24,17 @@ def multiplicative_inverse(e, phi):
     23
     """
     # PUT YOUR CODE HERE
-    div1=float()
+    div1 = float()
     d = 0 
-    div1=((d*e)-1)/phi
+    div1 = ((d * e) - 1) / phi
     for d in range (sys.maxsize) :
-        div1=((d*e)-1)/phi
-        if (div1). is_integer()==True:
+        div1 = ((d * e) - 1) / phi
+        if (div1).is_integer()==True:
             break
         else:
-            d+=1
+            d += 1
     return d
+
 
 def generate_keypair(p, q):
     if not (is_prime(p) and is_prime(q)):
@@ -66,7 +70,7 @@ def encrypt(pk, plaintext):
     key, n = pk
     # Convert each letter in the plaintext to numbers based on
     # the character using a^b mod m
-    cipher = [(ord(char) ** key) % n for char in plaintext]
+    cipher = [(ord(char)  key) % n for char in plaintext]
     # Return the array of bytes
     return cipher
 
@@ -80,7 +84,7 @@ def decrypt(pk, ciphertext):
     return ''.join(plain)
 
 
-if __name__ == '__main__':
+if name == 'main':
     print("RSA Encrypter/ Decrypter")
     p = int(input("Enter a prime number (17, 19, 23, etc): "))
     q = int(input("Enter another prime number (Not one you entered above): "))
@@ -94,4 +98,3 @@ if __name__ == '__main__':
     print("Decrypting message with public key ", public, " . . .")
     print("Your message is:")
     print(decrypt(public, encrypted_msg))
-
