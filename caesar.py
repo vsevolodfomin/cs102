@@ -1,26 +1,24 @@
 def encrypt_caesar(plaintext):
-    ciphertext = ''
-    for ch in plaintext:
-        if 'a' <= ch <= 'z' or 'A' <= ch <= 'Z':
-            code = ord(ch) + 3
-            if code > ord('Z') and code < ord('a') or code > ord('z'):
-                code -= 26
-            ciphertext += chr(code)
-        else:
-            ciphertext += ch
-    return ciphertext
-
-
+    cipherText = ""
+    for symbol in plaintext:
+        if symbol.isalpha():
+            cod = ord(symbol) + 3
+            if cod > ord('z'):
+                cod -= 26
+            Letter = chr(cod)
+            cipherText += Letter
+    return cipherText
+    
 def decrypt_caesar(ciphertext):
-    plaintext = ''
-    for ch in ciphertext:
-        if 'a' <= ch <= 'z' or 'A' <= ch <= 'Z':
-            code = ord(ch) - 3
-        if code < ord('a') and code > ord('Z') or code < ord('A'):
-                code += 26
-            plaintext += chr(code)
-        else:
-            plaintext += ch
+    plaintext = ""
+    for symbol in ciphertext:
+        if symbol.isalpha():
+            cod = ord(symbol) - 3
+            if cod > ord('z'):
+                cod +=26
+            Letter = chr(cod)
+            plaintext += Letter
+
     return plaintext
 
 
