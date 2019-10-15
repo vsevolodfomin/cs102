@@ -5,6 +5,11 @@ import caesar
 
 class CaesarCipherTest(unittest.TestCase):
 
+    def test_something(self):
+        self.assertEqual(True, False)
+
+    def test_so
+
     def test_encrypt_empty_string(self):
         self.assertEqual(caesar.encrypt_caesar(""), "")
 

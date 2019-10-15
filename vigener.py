@@ -32,10 +32,9 @@ def decrypt_vigenere(ciphertext, key):
             plaintext += chr(ciphertext_int[i])
     return plaintext
 
-"""
-p1 = input("Enter you word: ")
-k1 = input("Enter you keyword: ")
-n1 = encrypt_vigenere(p1, k1)
-print("Result encript:", n1)
-print("Result decripr", decrypt_vigenere(n1, k1))
-"""
+if __name__ == '__main__':
+    p1 = input("Enter you word: ")
+    k1 = input("Enter you keyword: ")
+    n1 = encrypt_vigenere(p1, k1)
+    print("Result encript:", n1)
+    print("Result decripr", decrypt_vigenere(n1, k1))

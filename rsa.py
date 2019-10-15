@@ -3,7 +3,7 @@ import sys
 
 
 def is_prime(n):
-    for i in range(2, int(n  0.5) + 1):
+    for i in range(2, int(n ** 0.5) + 1):
         if n % i == 0:
             return False
     return True
@@ -70,7 +70,7 @@ def encrypt(pk, plaintext):
     key, n = pk
     # Convert each letter in the plaintext to numbers based on
     # the character using a^b mod m
-    cipher = [(ord(char)  key) % n for char in plaintext]
+    cipher = [(ord(char) ** key) % n for char in plaintext]
     # Return the array of bytes
     return cipher
 
@@ -84,7 +84,7 @@ def decrypt(pk, ciphertext):
     return ''.join(plain)
 
 
-if name == 'main':
+if __name__ == '__main__':
     print("RSA Encrypter/ Decrypter")
     p = int(input("Enter a prime number (17, 19, 23, etc): "))
     q = int(input("Enter another prime number (Not one you entered above): "))
