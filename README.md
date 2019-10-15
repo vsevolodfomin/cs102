@@ -1,11 +1,11 @@
 # cs102
 # Assignements for ''introduction to python'' @ ITMO university
 
-# Работают функции:
+Работают функции:
 
-# caesar.py
-# vigenere.py
-# rsa.py
+caesar.py
+vigenere.py
+rsa.py
 
 # Текст проверен в pep8online.com
 
