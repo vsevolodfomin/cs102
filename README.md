@@ -7,11 +7,6 @@ rsa.py
 caesar.py
 vigenere.py
 
-
-caesar.py
-vigenere.py
-rsa.py
-
 # Текст проверен в pep8online.com
 
 # Unittest
