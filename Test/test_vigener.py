@@ -1,46 +1,36 @@
 import unittest
-import doctest
-import caesar
-"""
-
-def encrypt_vigenere(plaintext, key):
+import vigener
 
 
-def decrypt_vigenere(ciphertext, key):
 
-class CaesarCipherTest(unittest.TestCase):
+class vigenereCipherTest(unittest.TestCase):
 
     def test_encrypt_empty_string(self):
-        self.assertEqual(caesar.encrypt_caesar(""), "")
+        self.assertEqual(vigener.encrypt_vigenere("",""), "")
 
     def test_encrypt_uppercase(self):
-        self.assertEqual(caesar.encrypt_caesar("PYTHON"), "SBWKRQ")
+        self.assertEqual(vigener.encrypt_vigenere("PYTHON","A"), "PYTHON")
 
     def test_encrypt_lowercase(self):
-        self.assertEqual(caesar.encrypt_caesar("python"), "sbwkrq")
+        self.assertEqual(vigener.encrypt_vigenere("python","a"), "python")
 
-    def test_encrypt_uppercase_and_lowercase(self):
-        self.assertEqual(caesar.encrypt_caesar("Python"), "Sbwkrq")
+    def test_encrypt_uppercase_Long_key(self):
+        self.assertEqual(vigener.encrypt_vigenere("VSEVOLOD","ZAQ"), "USUUOBND")
 
-    def test_encrypt_uppercase_lowercase_and_digits(self):
-        self.assertEqual(caesar.encrypt_caesar("Python3.6"), "Sbwkrq3.6")
+    def test_encrypt_uppercase_lowercase_and_digits_Long_key(self):
+        self.assertEqual(vigener.encrypt_vigenere("Python3.6","zAq"), "Usjgid3.6")
 
     def test_decrypt_empty_string(self):
-        self.assertEqual(caesar.decrypt_caesar(""), "")
+        self.assertEqual(vigener.decrypt_vigenere("",""), "")
 
     def test_decrypt_uppercase(self):
-        self.assertEqual(caesar.decrypt_caesar("SBWKRQ"), "PYTHON")
+        self.assertEqual(vigener.decrypt_vigenere("PYTHON","A"), "PYTHON")
 
     def test_decrypt_lowercase(self):
-        self.assertEqual(caesar.decrypt_caesar("sbwkrq"), "python")
+        self.assertEqual(vigener.decrypt_vigenere("python","a"), "python")
 
-    def test_decrypt_uppercase_and_lowercase(self):
-        self.assertEqual(caesar.decrypt_caesar("Sbwkrq"), "Python")
+    def test_decrypt_uppercase_and_Long_key(self):
+        self.assertEqual(vigener.decrypt_vigenere("USUUOBND","ZAQ"), "VSEVOLOD")
 
-    def test_decrypt_uppercase_lowercase_and_digits(self):
-        self.assertEqual(caesar.decrypt_caesar("Sbwkrq3.6"), "Python3.6")
-
-"""
-
-
-
+    def test_decrypt_uppercase_lowercase_and_digits_Long_key(self):
+        self.assertEqual(vigener.decrypt_vigenere("Usjgid3.6","zAq"), "Python3.6")
