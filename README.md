@@ -3,9 +3,9 @@
 
 Работают функции:
 
-rsa.py
-caesar.py
-vigenere.py
+rsa.py;
+caesar.py;
+vigenere.py;
 
 # Текст проверен в pep8online.com
 
