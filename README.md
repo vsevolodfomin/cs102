@@ -14,8 +14,8 @@ vigenere.py;
 
 # Unittest
 
-python -m unittest Test/test_caesar.py
+python -m unittest Unit_test/test_caesar.py
 
-python -m unittest Test/test_vigener.py
+python -m unittest Unit_test/test_vigener.py
 
-python -m unittest Test/test_rsa.py
+python -m unittest Unit_test/test_rsa.py
