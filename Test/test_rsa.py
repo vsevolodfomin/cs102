@@ -2,36 +2,28 @@ import unittest
 import rsa
 
 
-"""
-class vigenereCipherTest(unittest.TestCase):
+class rsaCipherTest(unittest.TestCase):
 
-    def test_encrypt_empty_string(self):
-        self.assertEqual(vigener.encrypt_vigenere("",""), "")
+    def test_is_prime_true(self):
+        self.assertEqual(rsa.is_prime(17), True)
+  
+    
+    def test_is_prime_false(self):
+        self.assertEqual(rsa.is_prime(20), False)
 
-    def test_encrypt_uppercase(self):
-        self.assertEqual(vigener.encrypt_vigenere("PYTHON","A"), "PYTHON")
 
-    def test_encrypt_lowercase(self):
-        self.assertEqual(vigener.encrypt_vigenere("python","a"), "python")
+    def test_multiplicative_inverse(self):
+        self.assertEqual(rsa.multiplicative_inverse(7,40), 23)
 
-    def test_encrypt_uppercase_Long_key(self):
-        self.assertEqual(vigener.encrypt_vigenere("VSEVOLOD","ZAQ"), "USUUOBND")
 
-    def test_encrypt_uppercase_lowercase_and_digits_Long_key(self):
-        self.assertEqual(vigener.encrypt_vigenere("Python3.6","zAq"), "Usjgid3.6")
+    def test_gsd(self):
+        self.assertEqual(rsa.gcd(17, 23), 1)
 
-    def test_decrypt_empty_string(self):
-        self.assertEqual(vigener.decrypt_vigenere("",""), "")
 
-    def test_decrypt_uppercase(self):
-        self.assertEqual(vigener.decrypt_vigenere("PYTHON","A"), "PYTHON")
+    def test_encrypt(self):
+        self.assertEqual(rsa.encrypt((13, 221),"Hello"), [72, 101, 95, 95, 59])
 
-    def test_decrypt_lowercase(self):
-        self.assertEqual(vigener.decrypt_vigenere("python","a"), "python")
 
-    def test_decrypt_uppercase_and_Long_key(self):
-        self.assertEqual(vigener.decrypt_vigenere("USUUOBND","ZAQ"), "VSEVOLOD")
+    def test_decrypt(self):
+        self.assertEqual(rsa.decrypt((133, 221),[72, 101, 95, 95, 59]),"Hello")
 
-    def test_decrypt_uppercase_lowercase_and_digits_Long_key(self):
-        self.assertEqual(vigener.decrypt_vigenere("Usjgid3.6","zAq"), "Python3.6")
-"""
