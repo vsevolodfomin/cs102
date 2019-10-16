@@ -19,3 +19,12 @@ python -m unittest Unit_test/test_caesar.py
 python -m unittest Unit_test/test_vigener.py
 
 python -m unittest Unit_test/test_rsa.py
+
+# Doctest
+Вынесены как пример, в отдельную папку.
+
+python doc_test/rsa.py -v
+
+python doc_test/caesar.py -v
+
+python doc_test/vigener.py -v
