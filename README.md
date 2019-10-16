@@ -14,8 +14,17 @@ vigenere.py;
 
 # Unittest
 
-python -m unittest Test/test_caesar.py
+python -m unittest Unit_test/test_caesar.py
 
-python -m unittest Test/test_vigener.py
+python -m unittest Unit_test/test_vigener.py
 
-python -m unittest Test/test_rsa.py
+python -m unittest Unit_test/test_rsa.py
+
+# Doctest
+Вынесены как пример, в отдельную папку Doc_test:
+
+python doc_test/rsa.py -v
+
+python doc_test/caesar.py -v
+
+python doc_test/vigener.py -v
