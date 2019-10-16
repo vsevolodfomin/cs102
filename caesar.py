@@ -30,4 +30,4 @@ if __name__ == '__main__':
     p1 = input("Enter you encript word: ")
     print("Crypt:", encrypt_caesar(p1))
     k1 = input("Enter you crypt word: ")
-    print(":", decrypt_caesar(k1))
+    print("Decrypt", decrypt_caesar(k1))
