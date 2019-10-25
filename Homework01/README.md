@@ -1,4 +1,4 @@
-# vsevolodfomin/cs102
+# vsevolodfomin/cs102/Homework01/
 # Assignements for ''introduction to python'' @ ITMO university
 
 # Работают функции:
@@ -21,7 +21,6 @@ python -m unittest Unit_test/test_vigener.py
 python -m unittest Unit_test/test_rsa.py
 
 # Doctest
-Вынесены как пример, в отдельную папку Doc_test:
 
 python rsa.py -v
 
