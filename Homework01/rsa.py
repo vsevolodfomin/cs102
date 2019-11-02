@@ -5,9 +5,11 @@ import sys
 def is_prime(n):
     """
     Check for a simple number.
-    >>> is_prime(17)
+    >>> is_prime(2)
     True
-    >>> is_prime(20)
+    >>> is_prime(11)
+    True
+    >>> is_prime(8)
     False
     """
     for i in range(2, int(n ** 0.5) + 1):
@@ -19,7 +21,9 @@ def is_prime(n):
 def gcd(a, b):
     """
     Function to find the largest common divisor.
-    >>> gcd(17,23)
+    >>> gcd(12, 15)
+    3
+    >>> gcd(3, 7)
     1
     """
     while b != 0:
@@ -34,7 +38,6 @@ def multiplicative_inverse(e, phi):
     >>> multiplicative_inverse(7, 40)
     23
     """
-    # PUT YOUR CODE HERE
     div1 = float()
     d = 0 
     div1 = ((d * e) - 1) / phi
@@ -54,10 +57,8 @@ def generate_keypair(p, q):
         raise ValueError('p and q cannot be equal')
 
     n = p * q
-    # PUT YOUR CODE HERE
 
     phi = (p-1) * (q-1)
-    # PUT YOUR CODE HERE
 
     # Choose an integer e such that e and phi(n) are coprime
     e = random.randrange(1, phi)
@@ -104,3 +105,19 @@ def decrypt(pk, ciphertext):
     plain = [chr((char ** key) % n) for char in ciphertext]
     # Return the array of bytes as a string
     return ''.join(plain)
+
+
+if __name__ == '__main__':
+    print("RSA Encrypter/ Decrypter")
+    p = int(input("Enter a prime number (17, 19, 23, etc): "))
+    q = int(input("Enter another prime number (Not one you entered above): "))
+    print("Generating your public/private keypairs now . . .")
+    public, private = generate_keypair(p, q)
+    print("Your public key is ", public, " and your private key is ", private)
+    message = input("Enter a message to encrypt with your private key: ")
+    encrypted_msg = encrypt(private, message)
+    print("Your encrypted message is: ")
+    print(''.join(map(lambda x: str(x), encrypted_msg)))
+    print("Decrypting message with public key ", public, " . . .")
+    print("Your message is:")
+    print(decrypt(public, encrypted_msg))
