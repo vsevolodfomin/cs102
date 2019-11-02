@@ -8,10 +8,8 @@ def encrypt_vigenere(plaintext, key):
     'PYTHON'
     >>> encrypt_vigenere("python", "a")
     'python'
-    >>> encrypt_vigenere("VSEVOLOD","ZAQ")
-    'USUUOBND'
-    >>> encrypt_vigenere("Python3.6","zAq")
-    'Usjgid3.6'
+    >>> encrypt_vigenere("ATTACKATDAWN","LEMON")
+    'LXFOPVEFRNHR'
     """
     key_length = len(key)
     key_as_int = [ord(i) for i in key]
@@ -39,10 +37,8 @@ def decrypt_vigenere(ciphertext, key):
     'PYTHON'
     >>> decrypt_vigenere("python", "a")
     'python'
-    >>> decrypt_vigenere("USUUOBND","ZAQ")
-    'VSEVOLOD'
-    >>> decrypt_vigenere("Usjgid3.6","zAq")
-    'Python3.6'
+    >>> decrypt_vigenere("LXFOPVEFRNHR","LEMON")
+    'ATTACKATDAWN'
     """
     key_length = len(key)
     key_as_int = [ord(i) for i in key]
