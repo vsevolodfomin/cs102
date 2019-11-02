@@ -39,7 +39,7 @@ def decrypt_caesar(cipherText):
     plaintext = ""
     for symbol in cipherText:
         if symbol.isalpha():
-            cod = ord(symbol) - 3
+            code = ord(symbol) - 3
             if code < ord('a') and code > ord('Z') or code < ord('A'):
                 code += 26
             letter = chr(code)
