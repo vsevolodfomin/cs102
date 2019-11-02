@@ -14,11 +14,11 @@ def encrypt_caesar(plaintext):
     cipherText = ""
     for symbol in plaintext:
         if symbol.isalpha():
-            cod = ord(symbol) + 3
-            if cod > ord('Z') and cod < ord('a') or cod > ord('z'):
-                cod -= 26
-            Letter = chr(cod)
-            cipherText += Letter
+            code = ord(symbol) + 3
+            if code > ord('Z') and code < ord('a') or code > ord('z'):
+                code -= 26
+            letter = chr(code)
+            cipherText += letter
         else:
             cipherText += symbol
     return cipherText
@@ -40,10 +40,10 @@ def decrypt_caesar(cipherText):
     for symbol in cipherText:
         if symbol.isalpha():
             cod = ord(symbol) - 3
-            if cod < ord('a') and cod > ord('Z') or cod < ord('A'):
-                cod += 26
-            Letter = chr(cod)
-            plaintext += Letter
+            if code < ord('a') and code > ord('Z') or code < ord('A'):
+                code += 26
+            letter = chr(code)
+            plaintext += letter
         else:
             plaintext += symbol
     return plaintext
