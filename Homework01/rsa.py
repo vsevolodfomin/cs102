@@ -39,11 +39,11 @@ def multiplicative_inverse(e, phi):
     23
     """
     div1 = float()
-    d = 0 
+    d = 0
     div1 = ((d * e) - 1) / phi
-    for d in range (sys.maxsize) :
+    for d in range(sys.maxsize):
         div1 = ((d * e) - 1) / phi
-        if (div1).is_integer()==True:
+        if (div1).is_integer() is True:
             break
         else:
             d += 1
@@ -82,7 +82,6 @@ def encrypt(pk, plaintext):
     Encrypts RSA.
     >>> encrypt((13, 221),"Hello")
     [72, 101, 95, 95, 59]
-    
     """
     # Unpack the key into it's components
     key, n = pk
