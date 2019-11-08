@@ -1,5 +1,4 @@
-  
-def encrypt_vigenere(plaintext, key):
+  def encrypt_vigenere(plaintext, key):
     """
     Encrypts plaintext using a Vigenere cipher.
     >>> encrypt_vigenere("","")
@@ -20,7 +19,7 @@ def encrypt_vigenere(plaintext, key):
             value = (plaintext_int[i] + key_as_int[i % key_length]) % 26
             ciphertext += chr(value + 65)
         elif 97 <= plaintext_int[i] <= 122:
-            # 12 - change between alphabets 
+            # 12 - change between alphabets
             value = (plaintext_int[i] + key_as_int[i % key_length] - 12) % 26
             ciphertext += chr(value + 97)
         else:
@@ -54,4 +53,3 @@ def decrypt_vigenere(ciphertext, key):
         else:
             plaintext += chr(ciphertext_int[i])
     return plaintext
-    
